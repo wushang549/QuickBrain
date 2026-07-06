@@ -347,7 +347,6 @@ h3 {
 
 .feature-card,
 .game-card,
-.shot-card,
 .support-card {
   border: 4px solid #000;
   border-radius: 8px;
@@ -406,116 +405,52 @@ h3 {
 }
 
 .game-grid {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .game-card {
   position: relative;
-  min-height: 176px;
+  aspect-ratio: 1;
+  min-height: 0;
   overflow: hidden;
-  padding: 14px;
-  background: var(--cream);
+  background: #000;
 }
 
 .game-card h3 {
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   z-index: 1;
   padding: 8px 10px;
   border: 3px solid #000;
   border-radius: 8px;
   color: #fff;
-  background: var(--blue);
+  background: rgba(0, 61, 120, 0.94);
   text-align: center;
+  text-shadow: 0 1px 0 #000;
 }
 
-.game-card > span {
-  display: grid;
-  min-height: 110px;
-  place-items: center;
-  color: #07111f;
-  font-size: 1.7rem;
-  font-weight: 950;
-}
-
-.game-card.math {
-  background: #111;
-}
-
-.game-card.math > span {
-  color: #fff;
-}
-
-.game-card.visual > span {
-  background:
-    linear-gradient(90deg, #fff 25%, transparent 25% 50%, #fff 50% 75%, transparent 75%) 0 0 / 64px 64px,
-    linear-gradient(#4b96ff 50%, #fff 50%) 0 0 / 64px 64px;
-  border: 3px solid #000;
-}
-
-.game-card.number {
-  background: #47c3c8;
-}
-
-.game-card.pattern > span {
-  width: 114px;
-  height: 114px;
-  margin: 0 auto;
-  border: 8px solid #000;
-  border-radius: 50%;
-  background:
-    conic-gradient(var(--green) 0 25%, var(--red) 25% 50%, var(--yellow) 50% 75%, var(--blue-2) 75% 100%);
-}
-
-.game-card.reaction {
-  background: #79c173;
-}
-
-.game-card.reaction > span {
-  color: var(--yellow);
-  font-size: 4rem;
-  text-shadow: 3px 3px 0 #000;
-}
-
-.game-card.patches {
-  background: #fff;
-}
-
-.game-card.patches > span {
-  color: #fff;
-  background:
-    linear-gradient(90deg, #37d450 0 38%, transparent 38% 44%, #3488ff 44% 100%);
-  border: 3px solid #000;
-}
-
-.game-card.zip {
-  background: #ffd9c5;
-}
-
-.game-card.zip > span {
-  border: 16px solid #ff5a00;
-  border-radius: 32px;
-}
-
-.game-card.sudoku > span {
-  background:
-    linear-gradient(#111 2px, transparent 2px) 0 0 / 24px 24px,
-    linear-gradient(90deg, #111 2px, transparent 2px) 0 0 / 24px 24px,
-    #fff;
-  border: 3px solid #000;
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .showcase-grid {
   grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
+  align-items: start;
+  gap: 30px 24px;
 }
 
 .shot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   margin: 0;
-  overflow: hidden;
-  background: #000;
+  overflow: visible;
+  background: transparent;
 }
 
 .shot-card.wide {
@@ -524,17 +459,24 @@ h3 {
 
 .shot-card img {
   width: 100%;
-  aspect-ratio: 1;
+  height: auto;
   object-fit: contain;
-  background: #000;
+  background: transparent;
+}
+
+.shot-card:not(.wide) img {
+  width: min(100%, 270px);
+  max-height: 580px;
+  object-position: center top;
 }
 
 .shot-card figcaption {
-  padding: 12px 14px;
-  border-top: 4px solid #000;
-  color: #07111f;
-  background: #fff;
+  width: 100%;
+  color: #fff;
   font-weight: 950;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.86rem;
 }
 
 .split-section {

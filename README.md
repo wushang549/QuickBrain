@@ -35,7 +35,7 @@ Deploy the full folder to any static hosting provider, such as Netlify, Vercel s
 The current contact email placeholder is:
 
 ```text
-support@tudominio.com
+quickbraindev@gmail.com
 ```
 
 Search for that value in the HTML files and replace it with the real support email. Update any hosting or DNS settings in your static host when connecting the final custom domain.
