@@ -1,6 +1,6 @@
-# QuickBrain
+# QuickMind Games
 
-Static marketing website for the iOS app Quick Brain.
+Static marketing website for the iOS app QuickMind Games.
 
 ## Run locally
 
