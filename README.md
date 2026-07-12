@@ -65,7 +65,7 @@ quickmind.removeads.lifetime
 Before creating the real product in App Store Connect, consider updating it to a final-name-aligned value such as:
 
 ```text
-quickbrain.removeads.lifetime
+quickmindgames.removeads.lifetime
 ```
 
 Do not change this automatically unless the app code has a clearly isolated StoreKit product ID definition. If the iOS code depends on the old ID, update every StoreKit product reference, purchase lookup, restore path, entitlement check, and any App Store Connect product configuration together.
